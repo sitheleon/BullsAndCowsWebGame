@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 야구 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">숫자 야구 게임</h1>
+    <div id="game-container">
+        <p id="desription">0과 9 사이의 서로 다른 숫자 3개를 맞춰보세요.</p>
+        <div id="input-container">
+            <div class="number-input">
+                <button onclick="changeNumber('num1', -1)">-</button>
+                <input type="number" id="num1" value="0" min="0" max="9" readonly>
+                <button onclick="changeNumber('num1', 1)">+</button>
+            </div>
+            <div class="number-input">
+                <button onclick="changeNumber('num2', -1)">-</button>
+                <input type="number" id="num2" value="0" min="0" max="9" readonly>
+                <button onclick="changeNumber('num2', 1)">+</button>
+            </div>
+            <div class="number-input">
+                <button onclick="changeNumber('num3', -1)">-</button>
+                <input type="number" id="num3" value="0" min="0" max="9" readonly>
+                <button onclick="changeNumber('num3', 1)">+</button>
+            </div>
+            <button onclick="submitGuess()">제출</button>
+        </div>
+        <p id="result"></p>
+        <p id="attempts">시도 횟수: 0</p>
+    </div>
+    
+    <footer id="footer">
+        <p id="footer_text">&copy; Made mostly with ChatGPT, Modified by: </p>
+        <p id="footer_text"><a href="https://github.com/sitheleon">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
